@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def get_dv(start=20170101, end=20180101):
     import jaqs_fxdayu
     jaqs_fxdayu.patch_all()
@@ -65,7 +64,7 @@ def test(factor, data):
         print('{} OK!'.format(factor))
 
 
-from sky_internship import alpha19, alpha83, alpha135,CashToCurrentLiability, MA10Close, SalesCostRatio, TangibleAToInteBearDebt
+from sky_internship import alpha19, alpha83, alpha135,CashToCurrentLiability, MA10Close, SalesCostRatio, TangibleAToInteBearDebt,Beta60
 
-for f in ['alpha19', 'alpha83', 'alpha135','CashToCurrentLiability','MA10Close','SalesCostRatio','TangibleAToInteBearDebt']:
+for f in ['alpha19', 'alpha83', 'alpha135','CashToCurrentLiability','MA10Close','SalesCostRatio','TangibleAToInteBearDebt','Beta60']:
     test(f, globals()[f].run_formula(dv))
