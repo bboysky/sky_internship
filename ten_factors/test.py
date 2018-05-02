@@ -64,7 +64,7 @@ def test(factor, data):
         print('{} OK!'.format(factor))
 
 
-from sky_internship import alpha19, alpha83, alpha135,CashToCurrentLiability, MA10Close, SalesCostRatio, TangibleAToInteBearDebt,Beta60
+from ten_factors import sky_1, sky_2, sky_3,sky_4, sky_5, sky_6, sky_7,sky_8,sky_9,sky_10
 
-for f in ['alpha19', 'alpha83', 'alpha135','CashToCurrentLiability','MA10Close','SalesCostRatio','TangibleAToInteBearDebt','Beta60']:
+for f in ['sky_1', 'sky_2', 'sky_3','sky_4','sky_5','sky_6','sky_7','sky_8','sky_9','sky_10']:
     test(f, globals()[f].run_formula(dv))
